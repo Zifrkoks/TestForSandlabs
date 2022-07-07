@@ -3,7 +3,8 @@ import { observable } from "mobx";
 
 
 export default class TabsStore{
-    @observable Tabs = {
+    @observable CurrentTab = 0;
+    @observable OpenedTabs = {
 
     }
     
