@@ -5,10 +5,11 @@ import ListPage from './pages/ListPage';
 import HomePage from './pages/HomePage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { ChakraProvider } from '@chakra-ui/react'
 
-function App() {
+function App(props: any) {
   return (
-    <div className="">
+    <ChakraProvider>
       <Header/>
       <BrowserRouter>
         <Routes>
@@ -20,7 +21,7 @@ function App() {
       </BrowserRouter>
 
       <Footer/>
-    </div>
+    </ChakraProvider>
   );
 }
 

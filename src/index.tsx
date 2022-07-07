@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { createStore } from 'redux'
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux'
-import store from './store'
+import mainstore from './stores/MainStore'
+import { Provider } from 'mobx-react';
+const stores = {
+  mainstore,
 
+}
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <Provider store={store}>
+  <Provider store={stores}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
