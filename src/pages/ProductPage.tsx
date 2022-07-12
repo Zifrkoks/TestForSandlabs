@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import React from "react";
 
 function ProductPage(){
-    let { productId } = useParams();
+    let { slug } = useParams();
 
     return (
         <div>

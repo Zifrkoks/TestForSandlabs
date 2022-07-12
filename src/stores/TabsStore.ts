@@ -2,11 +2,12 @@ import { observable } from "mobx";
 
 
 
-export default class TabsStore{
+class TabsStore{
     @observable CurrentTab = 0;
     @observable OpenedTabs = {
-
+        
     }
     
 }
 
+const tabsStore = new TabsStore();

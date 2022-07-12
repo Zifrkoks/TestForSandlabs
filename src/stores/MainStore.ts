@@ -1,12 +1,17 @@
-import TabsStore from "./TabsStore";
+import { action, observable } from "mobx";
 
 
 class MainStore{
-    TabsStore: TabsStore;
-    constructor(){
-        this.TabsStore = new TabsStore();
-
+    @observable loading = false;
+    
+    @action setLoading = (load:boolean)=>{
+        this.loading = load;
     }
+    @action getLoading = () =>{
+        return this.loading
+    }
+    
 }
 
-export default new MainStore();
+const mainStore = new MainStore();
+export default mainStore;
