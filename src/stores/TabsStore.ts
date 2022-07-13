@@ -11,3 +11,5 @@ class TabsStore{
 }
 
 const tabsStore = new TabsStore();
+
+export default tabsStore;

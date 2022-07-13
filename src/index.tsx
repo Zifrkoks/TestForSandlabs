@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import mainstore from './stores/MainStore'
+import mainStore from './stores/MainStore'
+import cardsStore from './stores/CardsStore';
+import tabsStore from './stores/TabsStore';
 import { Provider } from 'mobx-react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
@@ -16,17 +18,17 @@ const breakpoints = {
   }
   const theme = extendTheme({ breakpoints })
 
-/*const stores = {
-  mainstore,
-  tabsstore : mainstore.TabsStore,
-  cardsstore: mainstore.CardsStore,
+const stores = {
+  mainStore,
+  tabsStore,
+  cardsStore,
 
-}*/
+}
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  //<Provider store={stores}>
+  <Provider>
     <React.StrictMode>
       <ChakraProvider>
       <BrowserRouter>
@@ -34,7 +36,7 @@ root.render(
       </BrowserRouter>
     </ChakraProvider>
     </React.StrictMode>
-  //</Provider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

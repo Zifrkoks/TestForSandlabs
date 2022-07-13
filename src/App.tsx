@@ -6,8 +6,9 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer';
 import mainStore from './stores/MainStore';
 import { LoadingIcon } from './components/LoadingIcon';
+import { observer } from 'mobx-react';
 
-function App(props: any) {
+const App = observer(() => {
   if(mainStore.loading === true)
     return <LoadingIcon/>
   return (
@@ -21,6 +22,6 @@ function App(props: any) {
     <Footer/>
   </div>
   );
-}
+})
 
 export default App;

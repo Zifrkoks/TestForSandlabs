@@ -8,7 +8,6 @@ function Header(){
     return (
         <div>
         <Box
-        z-zIndex="3"
         pos="sticky"
         display="flex"
         justifyItems="flex-start"

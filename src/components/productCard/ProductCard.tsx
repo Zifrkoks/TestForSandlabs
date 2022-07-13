@@ -9,15 +9,11 @@ interface Props{
     name:string;
     creator:string,
     desc:string,
-    
+    img:string,
 
 }
 
 function ProductCard(props:Props){
-
-
-    const creator:string = "creator_name"
-    const name:string = "Name_NFT"
     return (
         <Box 
         //h="400px" 
@@ -30,9 +26,10 @@ function ProductCard(props:Props){
         margin="30px"
         p='0px'
         fontFamily="Mingzat"
+        overflow="hidden"
         >
             <Image m='0px' 
-            src="./logo.webp" 
+            src={props.img} 
             h="200px" 
             w="300px"
             borderBottom="2px"
@@ -46,7 +43,6 @@ function ProductCard(props:Props){
                 <Box>
                     creator:
                 </Box>
-                <Spacer/>
                 <Box>
                     {props.creator}
                 </Box>
@@ -57,6 +53,7 @@ function ProductCard(props:Props){
             <Flex>
                 <ProductCardDisc desc={props.desc}/>
             </Flex>
+            
         </Box>
     );
 
